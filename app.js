@@ -19,7 +19,7 @@ document.getElementById("botao").addEventListener("click", function () {
         for (let filtros of filtro) {
             htmlResultado += `
                 <div class="item-resultado">
-                    <h2><a href="${filtros.link}" target="_blank">${filtros.titulo}</a></h2>
+                    <h2><a href="${filtros.link}" target="_blank" class="titulo">${filtros.titulo}</a></h2>
                     <p>${filtros.descricao}<br><br>${filtros.frase}</p>
                     <a href="${filtros.link}" target="_blank">Saiba Mais</a>
                 </div>
@@ -28,6 +28,7 @@ document.getElementById("botao").addEventListener("click", function () {
 
         // Insere o HTML gerado de uma vez no DOM
         meuSection.innerHTML = htmlResultado;
+        document.getElementById("pesquisa").value = "";
 
     } else {
         alert("Filósofo não encontrado na base de dados");

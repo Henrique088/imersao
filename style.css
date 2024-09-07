@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
 body {
@@ -48,8 +49,9 @@ section {
 
 h1,
 h2 {
-    font-family: Sevillana;
+    font-family: Bebas+Neue;
     text-align: center;
+    color: #ffffff;
 }
 
 input::placeholder {
@@ -152,10 +154,11 @@ button:active {
     margin: 10px auto;
     /* border: 2px solid #c42339; */
     border-radius: 20px;
-    scrollbar-width: 100%;
-    max-height: 30vh;
+    max-height: 20vh;
     overflow-y: auto;
+    scrollbar-width: 100%;
     font-family: Montserrat;
+    color: #fff;
 
 
 
@@ -192,9 +195,83 @@ button:active {
 
 .item-resultado a {
     text-decoration: none;
-    color: #000;
+    color: #ffffff;
+}
+
+.item-resultado .titulo {
+    color: #ff4756;
+    background: linear-gradient(20deg, #f00e0e 10%, #f5b54e 50%, #6fc6eb 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .item-resultado a:hover {
     text-decoration: underline;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+}
+
+/* Coração css */
+
+
+.loader {
+    width: 7em;
+    height: 5em;
+    position: relative;
+    animation: beat 3s infinite;
+}
+
+.loader::before,
+.loader::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    border-radius: 5em 5em 0 0;
+    animation: coldblue 3s infinite;
+}
+
+.loader::before {
+    left: 50px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.loader::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes coldblue {
+
+    0%,
+    100% {
+        background-color: rgb(255, 255, 255);
+    }
+
+    50% {
+        background-color: rgb(198, 23, 23);
+    }
 }
