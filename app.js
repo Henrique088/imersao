@@ -31,7 +31,11 @@ document.getElementById("botao").addEventListener("click", function () {
         document.getElementById("pesquisa").value = "";
 
     } else {
-        alert("Filósofo não encontrado na base de dados");
+        meuSection.innerHTML = ` <div class="item-resultado">
+        <p>Filósofo não encontrado na base de dados.</p>
+        </div>
+        `;
+        document.getElementById("pesquisa").value = "";
     }
 });
 
