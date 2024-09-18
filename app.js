@@ -46,7 +46,7 @@ function removerAcentos(str) {
 
 // Função para filtrar os nomes
 function filtrarPorNome(array, termo) {
-    if (termo === '') {
+    if (termo === '' || termo === ' ') {
         return null;
     } else {
         termo = removerAcentos(termo.toLowerCase());

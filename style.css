@@ -18,6 +18,40 @@ body {
 
 }
 
+nav {
+    position: fixed;
+    top: 0;
+    margin-top: 0;
+    color: #c42339;
+    padding: 15px;
+    background-color: transparent;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 10px;
+    /* o mesmo que padding-left e padding-right juntos*/
+    box-sizing: border-box;
+    /*faz com que o padding e border sejam incluídos no cálculo da largura total do elemento. Isso garante que o width: 100% não extrapole a largura do container ao adicionar padding*/
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-right: 5px;
+    width: 30px;
+}
+
+.princi {
+    color: #6fc6eb;
+}
+
 footer {
     display: flex;
     flex-direction: column;
@@ -141,6 +175,7 @@ button:hover {
     box-shadow: 0px 15px 20px rgba(228, 21, 48, 0.4);
     color: #fff;
     transform: translateY(-7px);
+
 }
 
 button:active {
@@ -159,9 +194,6 @@ button:active {
     scrollbar-width: 100%;
     font-family: Montserrat;
     color: #fff;
-
-
-
 }
 
 .resultados-pesquisa::after {
@@ -175,8 +207,6 @@ button:active {
     padding: 1rem;
     border-radius: 0.6rem;
     box-shadow: 0 2px 10px rgba(12, 12, 12, 0.2);
-
-
 }
 
 .resultados-pesquisa::-webkit-scrollbar {
